@@ -38,10 +38,11 @@ head(fishmean)
 nrow(fishmean)
 traitindices[1,]
 
-# each ROW is one SAMPLING AREA - all species of one sampling area are added up - introduced as single row in final data frame
+# each ROW is one SAMPLING AREA - ALL SPECIES ABUNDANCES OF ONE SAMPLING AREA ARE MULTIPLIED WITH  
+# THE RESPECTIVE TRAIT STRENGTHS, then added up and introduced as single row in final data frame:
 for(i in 1:nrow(fishmean)){
   for(j in 1:nrow(traitindices)){
-    # multiply each species of one sampling area with all traits
+    # multiply each species of one sampling area with all trait strengths of that species
     # - ONE ROW PER SPECIES; ONE DATAFRAME PER SAMPLING AREA (ABUNDANCE OF EACH SPECIES MULTIPLIED BY ALL RESPECTIVE TRAITS)
     multipliedtraitindices[j,]<-(as.numeric(fishmean[i,j]))*(as.numeric(traitindices[j,]))
   }
