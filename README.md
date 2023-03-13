@@ -1,3 +1,3 @@
 # R_Python_Scripts
 
-A short description is given at the beginning of each script. Input and output paths of have to be adjusted. All input files are included.
+Input and output paths of R scripts have to be adjusted. All input files are included.
